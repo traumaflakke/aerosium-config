@@ -1,0 +1,43 @@
+{
+  "name": "@aerosium/config",
+  "version": "1.0.0",
+  "description": "Shared ESLint and Prettier configurations for Aerosium projects",
+  "main": "index.js",
+  "type": "module",
+  "files": [
+    "eslint",
+    "prettier"
+  ],
+  "exports": {
+    "./eslint": "./eslint/index.js",
+    "./prettier": "./prettier/index.json"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint-config",
+    "prettier-config",
+    "aerosium",
+    "nextjs",
+    "react"
+  ],
+  "author": "Aerosium",
+  "license": "MIT",
+  "peerDependencies": {
+    "@next/eslint-plugin-next": "^14.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-jsx-a11y": "^6.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "eslint-plugin-unicorn": "^48.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
