@@ -43,6 +43,8 @@ export default [
         ecmaFeatures: {
           jsx: true,
         },
+        project: ['./tsconfig.json'],
+        tsconfigRootDir: '.',
       },
     },
     settings: {
@@ -50,8 +52,13 @@ export default [
         version: 'detect',
       },
       'import/resolver': {
-        typescript: true,
-        node: true,
+        typescript: {
+          alwaysTryTypes: true,
+          project: ['./tsconfig.json'],
+        },
+        node: {
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        },
       },
       next: {
         rootDir: '.',
