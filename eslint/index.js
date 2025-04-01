@@ -1,3 +1,5 @@
+import { FlatCompat } from '@eslint/eslintrc'
+import js from '@eslint/js'
 import nextPlugin from '@next/eslint-plugin-next'
 import typescript from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
@@ -7,11 +9,20 @@ import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import unicorn from 'eslint-plugin-unicorn'
 
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+})
+
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
   {
     ignores: ['**/node_modules/**', '**/dist/**', '**/build/**', '.next/**'],
   },
+  // Next.js config
+  ...compat.config({
+    extends: ['next/core-web-vitals', 'next/typescript'],
+  }),
   // Base config (JavaScript & TypeScript)
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
@@ -41,6 +52,9 @@ export default [
       'import/resolver': {
         typescript: true,
         node: true,
+      },
+      next: {
+        rootDir: '.',
       },
     },
     rules: {
