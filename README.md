@@ -32,7 +32,7 @@ Modern ESLint and Prettier configuration for Next.js and React projects with Typ
 yarn add -D @aerosium/config
 
 # Install peer dependencies
-yarn add -D @eslint/eslintrc @eslint/js @next/eslint-plugin-next @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-unicorn prettier typescript
+yarn add -D @eslint/eslintrc @eslint/js @next/eslint-plugin-next @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-unicorn prettier typescript eslint-config-next eslint-import-resolver-typescriptы
 ```
 
 ## Usage
