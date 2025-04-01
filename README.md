@@ -1,45 +1,45 @@
 # @aerosium/config
 
-Современная конфигурация ESLint и Prettier для Next.js и React проектов с поддержкой TypeScript. Этот пакет предоставляет готовый набор правил для поддержания высокого качества кода и единого стиля во всех проектах.
+Modern ESLint and Prettier configuration for Next.js and React projects with TypeScript support. This package provides a ready-to-use set of rules for maintaining high code quality and consistent style across all projects.
 
-## Особенности
+## Features
 
-### ✨ Основные преимущества
+### ✨ Key Benefits
 
-- **Готовая конфигурация для Next.js** - оптимизированные правила для работы с Next.js 14+
-- **Поддержка современных стандартов** - использует новую flat config структуру ESLint
-- **TypeScript из коробки** - полная поддержка TypeScript с строгими правилами
-- **Оптимизация производительности** - правила для Core Web Vitals и оптимизации
-- **Доступность (A11Y)** - встроенные правила для обеспечения доступности
-- **Согласованный стиль кода** - интеграция с Prettier для единого форматирования
-- **Автоматическая сортировка импортов** - поддержание порядка в импортах
-- **Именование файлов** - правила для консистентного именования файлов
+- **Ready-made Next.js Configuration** - optimized rules for working with Next.js 14+
+- **Modern Standards Support** - uses the new ESLint flat config structure
+- **TypeScript Out of the Box** - full TypeScript support with strict rules
+- **Performance Optimization** - rules for Core Web Vitals and optimization
+- **Accessibility (A11Y)** - built-in rules for ensuring accessibility
+- **Consistent Code Style** - Prettier integration for unified formatting
+- **Automatic Import Sorting** - maintaining order in imports
+- **File Naming** - rules for consistent file naming
 
-### 🎯 Что включено
+### 🎯 What's Included
 
-- Правила для Next.js и React
-- TypeScript конфигурация
-- Правила доступности (jsx-a11y)
-- Сортировка импортов
-- Prettier интеграция
-- Unicorn правила для современного JavaScript
-- Строгие правила TypeScript
+- Next.js and React rules
+- TypeScript configuration
+- Accessibility rules (jsx-a11y)
+- Import sorting
+- Prettier integration
+- Unicorn rules for modern JavaScript
+- Strict TypeScript rules
 
-## Установка
+## Installation
 
 ```bash
-# Используя yarn
+# Using yarn
 yarn add -D @aerosium/config
 
-# Установка peer dependencies
+# Install peer dependencies
 yarn add -D @eslint/eslintrc @eslint/js @next/eslint-plugin-next @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-unicorn prettier typescript
 ```
 
-## Использование
+## Usage
 
-### ESLint Конфигурация
+### ESLint Configuration
 
-Создайте `eslint.config.mjs` в корне проекта:
+Create `eslint.config.mjs` in your project root:
 
 ```javascript
 import aerosiumConfig from '@aerosium/config/eslint'
@@ -47,17 +47,17 @@ import aerosiumConfig from '@aerosium/config/eslint'
 export default aerosiumConfig
 ```
 
-### Prettier Конфигурация
+### Prettier Configuration
 
-Создайте `.prettierrc` в корне проекта:
+Create `.prettierrc` in your project root:
 
 ```json
 "@aerosium/config/prettier"
 ```
 
-### Настройки VS Code
+### VS Code Settings
 
-Добавьте эти настройки в ваш VS Code workspace:
+Add these settings to your VS Code workspace:
 
 ```json
 {
@@ -73,67 +73,67 @@ export default aerosiumConfig
 }
 ```
 
-## Преимущества
+## Benefits
 
-1. **Единый стиль кода**
-   - Автоматическое форматирование с помощью Prettier
-   - Согласованные правила для всех проектов
-   - Сортировка импортов и пропсов
+1. **Unified Code Style**
+   - Automatic formatting with Prettier
+   - Consistent rules across all projects
+   - Import and props sorting
 
-2. **Улучшение качества кода**
-   - Предотвращение типичных ошибок
-   - Соблюдение лучших практик React и Next.js
-   - Строгая типизация с TypeScript
+2. **Code Quality Improvement**
+   - Prevention of common mistakes
+   - Following React and Next.js best practices
+   - Strict typing with TypeScript
 
-3. **Производительность**
-   - Правила для оптимизации Core Web Vitals
-   - Предотвращение излишних ререндеров
-   - Оптимизация изображений и шрифтов
+3. **Performance**
+   - Core Web Vitals optimization rules
+   - Prevention of unnecessary re-renders
+   - Image and font optimization
 
-4. **Доступность**
-   - Встроенные правила a11y
-   - Проверка ARIA атрибутов
-   - Семантическая валидация
+4. **Accessibility**
+   - Built-in a11y rules
+   - ARIA attributes validation
+   - Semantic validation
 
-5. **Современные стандарты**
-   - Поддержка новой flat config структуры ESLint
-   - Совместимость с последними версиями Next.js
-   - Правила для современного JavaScript
+5. **Modern Standards**
+   - Support for new ESLint flat config structure
+   - Compatibility with latest Next.js versions
+   - Rules for modern JavaScript
 
-## Ограничения и особенности
+## Limitations and Considerations
 
-1. **Строгие правила**
-   - Некоторые правила могут показаться слишком строгими
-   - Может потребоваться время на адаптацию команды
-   - Возможно, придется отключить некоторые правила для legacy кода
+1. **Strict Rules**
+   - Some rules might seem too strict
+   - Team adaptation time might be needed
+   - May need to disable some rules for legacy code
 
-2. **Зависимости**
-   - Большое количество peer dependencies
-   - Необходимость поддерживать актуальные версии
-   - Возможные конфликты версий в больших проектах
+2. **Dependencies**
+   - Large number of peer dependencies
+   - Need to maintain up-to-date versions
+   - Possible version conflicts in large projects
 
-3. **Производительность**
-   - ESLint с большим количеством правил может работать медленнее
-   - Может потребоваться настройка игнорируемых файлов/папок
-   - В больших проектах рекомендуется использовать ESLint cache
+3. **Performance**
+   - ESLint with many rules might work slower
+   - Might need to configure ignored files/folders
+   - ESLint cache recommended for large projects
 
-## Рекомендации по использованию
+## Usage Recommendations
 
-1. **Постепенное внедрение**
-   - В существующих проектах внедряйте правила постепенно
-   - Используйте `eslint --fix` для автоматического исправления
-   - Начните с форматирования, затем добавляйте более строгие правила
+1. **Gradual Implementation**
+   - Implement rules gradually in existing projects
+   - Use `eslint --fix` for automatic fixes
+   - Start with formatting, then add stricter rules
 
-2. **Настройка под проект**
-   - Отключайте правила, которые не подходят вашему проекту
-   - Настройте игнорируемые файлы и папки
-   - Адаптируйте конфигурацию под специфику проекта
+2. **Project-specific Setup**
+   - Disable rules that don't fit your project
+   - Configure ignored files and folders
+   - Adapt configuration to project specifics
 
-3. **Оптимизация процесса**
-   - Настройте pre-commit хуки
-   - Используйте ESLint и Prettier в CI/CD
-   - Регулярно обновляйте зависимости
+3. **Process Optimization**
+   - Set up pre-commit hooks
+   - Use ESLint and Prettier in CI/CD
+   - Regularly update dependencies
 
-## Лицензия
+## License
 
 MIT
